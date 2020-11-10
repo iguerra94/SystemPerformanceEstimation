@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+  font-family: system-ui, sans-serif;
+}
+
+h1, h2, p.main-container__solution-tables-and-polynom-title, p.main-container__solution-polynom, p.main-container__solution-trend-curve-title {
+  text-align: center;
+  height: 4rem;
+  line-height: 4rem;
+}
+
+.main-container {
+  height: calc(100vh - 6rem);
+  padding: 2rem 1rem;
+  margin-top: 1rem;
+  border-top: 2px dashed #aaa;
+}
+
+.main-container__problem-data {
+  margin: 1rem 0;
+  display: flex;
+  width: 100%;
+}
+
+.main-container__problem-data > * {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container__problem-data-table-title, .main-container__problem-system-matrix-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.main-container__problem-system-matrix-container, .main-container__problem-data-table-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.data-table-image {
+  width: 10rem;
+}
+
+.data-matrix-image {
+  width: 30rem;
+}
+
+p.main-container__solution-tables-and-polynom-title, p.main-container__solution-trend-curve-title, p.main-container__solution-polynom {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.main-container__solution-tables, .main-container__solution-trend-curve-container {
+  margin: 1rem 0;
+  display: flex;
+  width: 100%;
+}
+
+.main-container__solution-tables > *, .main-container__solution-trend-curve-container > * {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.solution-matrix-table-title, .target-values-table-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.solution-matrix-table, .target-values-table {
+  width: 80%;
+}
+
+.target-values-table {
+  margin-bottom: 1rem;
+}
+
+.table-header {
+  background-color: #333;
+  color: #eee;
+}
+
+.column-flex-1 {
+  flex: 1;
+}
+
+.solution-matrix-table__item-row, .target-values-table__item-row {
+  display: flex;
+  align-items: center;
+  height: 3.5rem;
+}
+
+.solution-matrix-table__item-row:not(:last-child), .target-values-table__item-row:not(:last-child) {
+  border-bottom: 1px solid #333;
+}
+
+.solution-matrix-table__item-column, .target-values-table__item-column {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+  flex-direction: column;
+}
+
+.solution-matrix-table__item-column:not(:last-child), .target-values-table__item-column:not(:last-child)  {
+  border-right: 1px solid #333;
+}
+
+.solution-matrix-table__item-column.column-header:not(:last-child), .target-values-table__item-column.column-header:not(:last-child) {
+  border-right: 1px solid #eee;
+}

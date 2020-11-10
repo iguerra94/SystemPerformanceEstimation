@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA 2020 - Actividad Práctica B2</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+  <!-- Font Awesome -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"></link>
+
+</head>
+<body>
+  <h1>Estimación del desempeño de un sistema</h1>
+  <div class="main-container">
+    <h2>Datos del problema</h2>
+    <div class="main-container__problem-data">
+      <div class="main-container__problem-data-table">
+        <span class="main-container__problem-data-table-title">Tabla de desempeño del sistema</span>
+        <div class="main-container__problem-data-table-container">
+          <img class="data-table-image" src="images/tabla-desempeño-sistema.png" alt="" />
+        </div>
+      </div>
+      <div class="main-container__problem-system-matrix">
+        <span class="main-container__problem-system-matrix-title">Matriz del sistema</span>
+        <div class="main-container__problem-system-matrix-container">
+          <img class="data-matrix-image" src="images/matriz-sistema.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <h2>Solución del problema</h2>
+    <div class="main-container__solution">
+      <p class="main-container__solution-tables-and-polynom-title">
+        Solución con
+        <select id="solution-fixed-decimals-nr">
+          <option value="0">-</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+        decimales
+      </p>
+      <p class="main-container__solution-polynom">Polinomio resultante: <span id="solution-polynom"></span></p>
+      <div class="main-container__solution-tables">
+        <div class="main-container__solution-matrix-table-container">
+          <span class="solution-matrix-table-title">Matriz de incógnitas</span>
+          <div id="solution-matrix-table" class="solution-matrix-table">
+            <div class="solution-matrix-table__item-row table-header">
+              <div class="solution-matrix-table__item-column column-header column-flex-1">Incógnita</div>
+              <div class="solution-matrix-table__item-column column-header column-flex-1">Valor</div>
+            </div>
+
+            <div class="solution-matrix-table__item-row" style="background-color: #ddd;">
+              <div class="solution-matrix-table__item-column column-flex-1"><strong>a</strong></div>
+              <div class="solution-matrix-table__item-column column-flex-1">
+                <p class="solution-matrix-term"><i class="fas fa-spinner fa-spin"></i></p>
+              </div>
+            </div>
+
+            <div class="solution-matrix-table__item-row" style="background-color: #ddd;">
+              <div class="solution-matrix-table__item-column column-flex-1"><strong>b</strong></div>
+              <div class="solution-matrix-table__item-column column-flex-1">
+                <p class="solution-matrix-term"><i class="fas fa-spinner fa-spin"></i></p>
+              </div>
+            </div>
+
+            <div class="solution-matrix-table__item-row" style="background-color: #ddd;">
+              <div class="solution-matrix-table__item-column column-flex-1"><strong>c</strong></div>
+              <div class="solution-matrix-table__item-column column-flex-1">
+                <p class="solution-matrix-term"><i class="fas fa-spinner fa-spin"></i></p>
+              </div>
+            </div>
+
+            <div class="solution-matrix-table__item-row" style="background-color: #ddd;">
+              <div class="solution-matrix-table__item-column column-flex-1"><strong>d</strong></div>
+              <div class="solution-matrix-table__item-column column-flex-1">
+                <p class="solution-matrix-term"><i class="fas fa-spinner fa-spin"></i></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-container__solution-target-values-table-container">
+          <span class="target-values-table-title">Solución de los valores objetivo</span>
+          <div id="target-values-table" class="target-values-table">
+            <div class="target-values-table__item-row table-header">
+              <div class="target-values-table__item-column column-header column-flex-1">n (Kregs)</div>
+              <div class="target-values-table__item-column column-header column-flex-1">T (miliseg)</div>
+            </div>
+
+            <div class="target-values-table__item-row" style="background-color: #ddd;">
+              <div class="target-values-table__item-column column-flex-1"><strong class="target-value">200</strong></div>
+              <div class="target-values-table__item-column column-flex-1">
+                <p class="solution-target-value"><i class="fas fa-spinner fa-spin"></i></p>
+              </div>
+            </div>
+
+            <div class="target-values-table__item-row" style="background-color: #ddd;">
+              <div class="target-values-table__item-column column-flex-1"><strong class="target-value">300</strong></div>
+              <div class="target-values-table__item-column column-flex-1">
+                <p class="solution-target-value"><i class="fas fa-spinner fa-spin"></i></p>
+              </div>
+            </div>
+          </div>
+          * Diferencia con respecto al valor T(n) con 9 decimales. 
+        </div>
+      </div>
+      <p class="main-container__solution-trend-curve-title">
+        Curva de respuesta T(n) para 35 <= n <= 300 Kregs (9 decimales)
+      </p>
+      <div class="main-container__solution-trend-curve-container">
+        <div class="main-container__solution-trend-curve">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="index.js" type="module"></script>
+</body>
+</html>
